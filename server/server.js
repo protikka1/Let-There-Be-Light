@@ -1,4 +1,18 @@
 const express = require('express');
+dev
+const mongoose = require('mongoose');
+const cors = require('cors');
+require('dotenv').config();7
+7mongoose.connect(process.env.MONGO_URL, {
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Routes
+app.use('/api/services', require('./routes/services'));
+
+module.exports = app; // ✅ Only export app — no listen
+
 const router = express.Router();
 const Service = require('../models/Service');
 
@@ -14,3 +28,4 @@ router.post('/', async (req, res) => {
 });
 
 module.exports = router;
+main

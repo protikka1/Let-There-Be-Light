@@ -1,6 +1,10 @@
 name: Run Server Tests
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   test:
@@ -8,15 +12,30 @@ jobs:
     defaults:
       run:
         working-directory: server
+
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Node.js
+
+      - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: server/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('server/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
         run: npm install
+
+      - name: Show Node.js and npm version
+        run: |
+          node -v
+          npm -v
 
       - name: Run tests
         run: npm test

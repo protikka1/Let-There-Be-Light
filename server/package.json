@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "format": "prettier --write \"**/*.js\""
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -12,6 +13,7 @@
     "dotenv": "^16.1.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8"
   }
 }

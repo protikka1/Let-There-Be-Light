@@ -1,6 +1,16 @@
+ HEAD
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - dev
+      - main
+
 name: Run Server Tests
 
 on: [push, pull_request]
+ 8b789af9947ade0c55f43cdd8ebbe3b5e127a935
 
 jobs:
   test:
@@ -13,12 +23,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
+ HEAD
+          node-version: 1
+
           node-version: '18'
+ 8b789af9947ade0c55f43cdd8ebbe3b5e127a935
 
       - name: Install dependencies
         run: npm install
 
       - name: Run tests
+ HEAD
+        run: npm run tes
+
         run: npm test
+ 8b789af9947ade0c55f43cdd8ebbe3b5e127a935
         env:
           MONGO_URI: ${{ secrets.MONGO_URI }}

@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+ dev
+    "start": "node start.js",
+    "test": "NODE_ENV=test jest --detectOpenHandles"
     "dev": "nodemon server.js"
+ main
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -12,6 +16,11 @@
     "dotenv": "^16.1.4"
   },
   "devDependencies": {
+ dev
+    "jest": "^29.6.1",
+    "supertest": "^6.3.3",
+
+main
     "nodemon": "^2.0.22"
   }
 }

@@ -9,9 +9,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start"
-  }
-  "scripts": {
-  "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\""
+    "start": "react-scripts start",
+    format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\""
   }
 }

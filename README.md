@@ -24,3 +24,4 @@ A nonprofit website to support marginalized communities. Features include:
 3. Create `.env` file for backend (MongoDB URI, port)
 4. Run frontend: `npm start` in `/client`
 5. Run backend: `npm run dev` in `/server`
+[![Audit Node.js Dependencies](https://github.com/protikka1/Let-There-Be-Light/actions/workflows/dependency-audit.yml/badge.svg)](https://github.com/protikka1/Let-There-Be-Light/actions/workflows/dependency-audit.yml)
